@@ -1,5 +1,67 @@
+/* General Settings */
+:root {
+  --background-dark: #1a1a1a;
+  --text-dark: #fff;
+  --caption-color-dark: #ffd700;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:Arial, sans-serif;
+}
+
+
+/* Small Screen - default */
+h1, h2 {
+  text-align: center;
+}
+
+
+/* Medium Screen @480px */
+@media screen and (min-width: 480px) {
+  
+}
+
+
+/* Large Screen @780px */
+@media screen and (min-width: 780px) {
+  
+}
+
+
+/* Extra-Large Screen @1200px */
+@media screen and (min-width: 1200px) {
+  
+}
+
+/* Extra-Large Screen @1200px */
+@media screen and () {
+  
+}
+
+/* Scroll-Behavior */
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Dark-Mode Settings */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+  }
+  a {
+    color: var(--text-dark);
+  }
 }
