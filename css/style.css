@@ -45,6 +45,11 @@ nav {
   text-decoration: none;
 }
 
+.nav-logo img {
+  width: 120px;
+  height: auto;
+}
+
 .nav-menu {
   display: none;
   flex-direction: column;
@@ -160,6 +165,11 @@ footer {
     width: auto;
   }
 
+  .nav-logo img {
+    width: 150px;
+    height: auto;
+  }
+
   .nav-menu ul {
     display: flex;
   }
@@ -201,7 +211,14 @@ footer {
 
 /** Large Screen @780px **/
 @media screen and (min-width: 780px) {
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
+  .nav-logo img {
+    width: 200px;
+  }
 }
 
 
