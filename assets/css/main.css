@@ -172,7 +172,6 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 @media (min-width: 1200px) {
-
   .header~main,
   .header~#footer {
     margin-left: 300px;
@@ -582,6 +581,10 @@ section,
   font-size: 14px;
 }
 
+.purecounter-plus::after {
+  content: "+";
+}
+
 /*--------------------------------------------------------------
 # Skills Section
 --------------------------------------------------------------*/
@@ -789,6 +792,16 @@ section,
 
 .portfolio .portfolio-content:hover img {
   transform: scale(1.1);
+}
+
+.bg-orange {
+  background-color: #ff8700 !important;
+  color: #fff;
+}
+
+.bg-purple {
+  background-color: #6f42c1 !important;
+  color: #fff;
 }
 
 /*--------------------------------------------------------------
