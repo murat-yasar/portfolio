@@ -38,4 +38,40 @@
   $contact->add_message( $_POST['message'], 'Message', 10);
 
   echo $contact->send();
+
+// ALT METHOD
+//
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//     $name = filter_var(trim($_POST["name"]), FILTER_SANITIZE_STRING);
+//     $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
+//     $subject = filter_var(trim($_POST["subject"]), FILTER_SANITIZE_STRING);
+//     $message = filter_var(trim($_POST["message"]), FILTER_SANITIZE_STRING);
+
+//     if (empty($name) || empty($email) || empty($subject) || empty($message)) {
+//         http_response_code(400);
+//         echo "Please fill in all fields.";
+//         exit;
+//     }
+//     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+//         http_response_code(400);
+//         echo "Invalid email address.";
+//         exit;
+//     }
+
+//     $to = "dev.muratyasar@gmail.com";
+//     $email_subject = "New contact from $name: $subject";
+//     $email_body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
+//     $headers = "From: $name <$email>";
+
+//     if (mail($to, $email_subject, $email_body, $headers)) {
+//         http_response_code(200);
+//         echo "Message sent successfully.";
+//     } else {
+//         http_response_code(500);
+//         echo "Failed to send message.";
+//     }
+// } else {
+//     http_response_code(403);
+//     echo "Forbidden";
+// }
 ?>
