@@ -3,10 +3,8 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/murawqce/public_html
 
-    # Make sure target directory exists
     - /bin/mkdir -p $DEPLOYPATH
 
-    # Deploy everything from repo to public_html
     - /bin/rsync -av --delete \
       --exclude='.git' \
       --exclude='.cpanel.yml' \
